@@ -63,7 +63,7 @@ void printTextArray(char interprets[][maximumInterpretSize], int sizeOfArray) {
  * @param fileName 
  * @return char
  */
-char readTextFile(char interprets[][maximumInterpretSize], char fileName[]) {
+void readTextFile(char interprets[][maximumInterpretSize], char fileName[]) {
     
     FILE* file = fopen(fileName, "r"); 
 
@@ -75,8 +75,6 @@ char readTextFile(char interprets[][maximumInterpretSize], char fileName[]) {
     }
 
     fclose(file);
-
-    return interprets[maximumInterprets][maximumInterpretSize];
 }
 
 
