@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="0841BB5CEF69904D">
-  <PROJECT FORMAT="1.00" NAME="Bubblesort" AUTHOR="axnapoli" CREATED="2020.11.03 20:36:44" MODIFIED="2020.11.03 21:10:22">
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="7610728642C323C1">
+  <PROJECT FORMAT="1.00" NAME="Bubblesort" AUTHOR="axnapoli" CREATED="2020.11.03 20:36:44" MODIFIED="2020.11.03 22:45:20">
     <DIAGRAMS>
-      <DIAGRAM FORMAT="1.00" ID="0" NAME="Bubble-Sort" CREATED="2020.11.03 20:36:50" MODIFIED="2020.11.03 21:10:22">
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="Bubble-Sort" CREATED="2020.11.03 20:36:50" MODIFIED="2020.11.03 22:45:20">
         <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="11">
           <ENTRIES>
             <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
@@ -17,7 +17,7 @@
             </ENTRY>
             <ENTRY COLUMN="0" ROW="2">
               <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
-                <TEXT><![CDATA[Array = 9,3,1,7,6,2,4,8,5]]></TEXT>
+                <TEXT><![CDATA[Array = "Zappa", "Bob Dylan", "Duran Duran", "Abba"]]></TEXT>
               </FIGURE>
             </ENTRY>
             <ENTRY COLUMN="0" ROW="3">

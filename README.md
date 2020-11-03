@@ -16,11 +16,13 @@ Für die Erstellung von Nassi-Shneiderman-Diagrammen wurde die Software "[Struct
 
 Als Algorithmus kommt in diesem einfachen Fall ein einfacher Bubble-Sort zum Einsatz. Dieser hat den Vorteil der leichten Verständlichkeit - dem gegenüber steht der Nachteil der vergleichsweisen schlechten Performance.
 
-In der ersten Iteration des Lösungsansatzes wird zunächst - noch von der Ziellösung abweichend - lediglich mit einem Zahlen-Array gearbeitet und damit die Grundlage für die alphabetische Sortierung eines Arrays mit Zeichenketten (Interpreten) geschaffen.
+In der ersten Iteration des Lösungsansatzes habe ich zunächst - noch von der Ziellösung abweichend - die einfachste Lösung gewählt und mit einem Zahlen-Array gearbeitet.
 
-Die zweite Iteration verfolgt dann schließlich den finalen Ansatz. Dieser ist in ANSI_C etwas komplexer umzusetzen und auch in der Darstellung als PAP/Struktogramm aufwändiger, da nicht alleine eine einfache Liste mit Integer-Werten zu betrachten ist, sondern komplexe Zeichenketten mit einer verglichen werden müssen.
+Die zweite Iteration verfolgt dann im kleinen Maßstab den finalen Ansatz. Dieser ist in ANSI-C geringfügig aufwändiger umzusetzen.
 
-## Iteration 1
+Die dritte Iteration erfüllt schließlich die Aufgabe 100 Interpreten, die in willkürlicher Reihenfolge vorliegen, alphabetisch aufsteigend zu sortieren. Dazu wurde Iteration 2 um eine Methode zum einlesen der ersten 100 Zeilen einer Textdatei erweitert und eine solche Datei mit 100 Interpreten hinzugefügt.
+
+## Diagramme
 
 Nassi-Shneiderman-Diagramm:
 
@@ -29,7 +31,3 @@ Nassi-Shneiderman-Diagramm:
 PAP
 
 ![Bubble-Sort](https://github.com/napolitano/fom-excercises-bubble-sort/blob/main/bubble-sort-pap.png)
-
-## Iteration 2
-
-...
