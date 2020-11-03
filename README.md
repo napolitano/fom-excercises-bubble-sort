@@ -22,6 +22,8 @@ Die zweite Iteration verfolgt dann im kleinen Maßstab den finalen Ansatz. Diese
 
 Die dritte Iteration erfüllt schließlich die Aufgabe 100 Interpreten, die in willkürlicher Reihenfolge vorliegen, alphabetisch aufsteigend zu sortieren. Dazu wurde Iteration 2 um eine Methode zum einlesen der ersten 100 Zeilen einer Textdatei erweitert und eine solche Datei mit 100 Interpreten hinzugefügt.
 
+Selbstverständlich könnte anstelle der Interpreten auch der Name eines Albums stehen oder eine Kombination aus beidem wie z.B. "Infected Mushroom - Legend of the Black Shawarma".
+
 ## Diagramme
 
 Nassi-Shneiderman-Diagramm:
