@@ -54,7 +54,7 @@ void bubblesort(char interprets[][maximumInterpretSize], int sizeOfArray) {
  */
 void printTextArray(char interprets[][maximumInterpretSize], int sizeOfArray) {
     for(int x = 0; x < sizeOfArray; x++)
-        printf("%d: %s", x, interprets[x]);
+        printf("%d: %s", x+1, interprets[x]);
 }
 
 /**
@@ -64,9 +64,7 @@ void printTextArray(char interprets[][maximumInterpretSize], int sizeOfArray) {
  * @return char
  */
 void readTextFile(char interprets[][maximumInterpretSize], char fileName[]) {
-    
     FILE* file = fopen(fileName, "r"); 
-
     char line[maximumInterpretSize]; 
 
     for(int i=0; i < 100 ; i++ ) {
@@ -76,7 +74,6 @@ void readTextFile(char interprets[][maximumInterpretSize], char fileName[]) {
 
     fclose(file);
 }
-
 
 /**
  * @brief Bubblesort example
