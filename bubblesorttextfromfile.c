@@ -81,16 +81,14 @@ void readTextFile(char interprets[][maximumInterpretSize], char fileName[]) {
  * @return int 
  */
 int main () {
-
-    // Unordered list of numbers
-    char interprets[maximumInterprets][maximumInterpretSize];
+   char interprets[maximumInterprets][maximumInterpretSize];
 
     // Read textfile line by line
     readTextFile(interprets, "rollingstone2005list100greatestartists.txt");
 
     int sizeOfArray = sizeof(interprets)/sizeof(interprets[0]);
 
-    // Sort the unordered list of numbers ascending
+    // Sort the unordered list 
     bubblesort(interprets, sizeOfArray);
     // Output of sorted result
     printTextArray(interprets, sizeOfArray);
