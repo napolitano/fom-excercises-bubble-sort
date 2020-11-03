@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <string.h>
 
-// TODO: Needs refinement: passing by reference!
+#define maximumSize = 100;
 
 /**
  * @brief Return true if interprets x > interprets y
@@ -13,7 +13,7 @@
  * @return true 
  * @return false 
  */
-bool vergleiche(char interprets[][100], int x, int y) {
+bool vergleiche(char interprets[][maximumSize], int x, int y) {
     return (strcmp(interprets[x],interprets[y]) > 0);
 }
 
@@ -24,7 +24,7 @@ bool vergleiche(char interprets[][100], int x, int y) {
  * @param x
  * @param y 
  */
-void tausche(char interprets[][100], int x, int y) {
+void tausche(char interprets[][maximumSize], int x, int y) {
     char temp[100];
     
     strcpy(temp, interprets[x]); 
@@ -38,7 +38,7 @@ void tausche(char interprets[][100], int x, int y) {
  * @param interprets 
  * @param sizeOfArray 
  */
-void bubblesort(char interprets[][100], int sizeOfArray) {
+void bubblesort(char interprets[][maximumSize], int sizeOfArray) {
     while(sizeOfArray--)
         for(int i = 1; i <= sizeOfArray; i++)
             if(vergleiche(interprets, i-1, i))
@@ -51,7 +51,7 @@ void bubblesort(char interprets[][100], int sizeOfArray) {
  * @param interprets 
  * @param sizeOfArray 
  */
-void printTextArray(char interprets[][100], int sizeOfArray) {
+void printTextArray(char interprets[][maximumSize], int sizeOfArray) {
     for(int x = 0; x < sizeOfArray; x++)
         printf("%s\n", interprets[x]);
 }
@@ -64,7 +64,7 @@ void printTextArray(char interprets[][100], int sizeOfArray) {
 int main () {
 
     // Unordered list of numbers
-    char interprets[][100] = { "Bob Dylan", "Abba", "Elvis Presly", "Duran Duran", "Zappa", "Infected Mushroom", "Prodigy" };
+    char interprets[][maximumSize] = { "Bob Dylan", "Abba", "Elvis Presley", "Duran Duran", "Zappa", "Infected Mushroom", "Prodigy" };
     int sizeOfArray = sizeof(interprets)/sizeof(interprets[0]);
 
     // Sort the unordered list of numbers ascending
