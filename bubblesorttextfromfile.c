@@ -3,7 +3,8 @@
 #include <stdbool.h>
 #include <string.h>
 
-#define maximumSize 100
+#define maximumInterprets 100
+#define maximumInterpretSize 256
 
 /**
  * @brief Return true if interprets x > interprets y
@@ -13,7 +14,7 @@
  * @return true 
  * @return false 
  */
-bool vergleiche(char interprets[][maximumSize], int x, int y) {
+bool vergleiche(char interprets[][maximumInterpretSize], int x, int y) {
     return (strcmp(interprets[x],interprets[y]) > 0);
 }
 
@@ -24,7 +25,7 @@ bool vergleiche(char interprets[][maximumSize], int x, int y) {
  * @param x
  * @param y 
  */
-void tausche(char interprets[][maximumSize], int x, int y) {
+void tausche(char interprets[][maximumInterpretSize], int x, int y) {
     char temp[100];
     
     strcpy(temp, interprets[x]); 
@@ -38,7 +39,7 @@ void tausche(char interprets[][maximumSize], int x, int y) {
  * @param interprets 
  * @param sizeOfArray 
  */
-void bubblesort(char interprets[][maximumSize], int sizeOfArray) {
+void bubblesort(char interprets[][maximumInterpretSize], int sizeOfArray) {
     while(sizeOfArray--)
         for(int i = 1; i <= sizeOfArray; i++)
             if(vergleiche(interprets, i-1, i))
@@ -51,10 +52,33 @@ void bubblesort(char interprets[][maximumSize], int sizeOfArray) {
  * @param interprets 
  * @param sizeOfArray 
  */
-void printTextArray(char interprets[][maximumSize], int sizeOfArray) {
+void printTextArray(char interprets[][maximumInterpretSize], int sizeOfArray) {
     for(int x = 0; x < sizeOfArray; x++)
-        printf("%s\n", interprets[x]);
+        printf("%d: %s", x, interprets[x]);
 }
+
+/**
+ * @brief Bare bones text file reader. DANGER: Do not use this this in production
+ * 
+ * @param fileName 
+ * @return char
+ */
+char readTextFile(char interprets[][maximumInterpretSize], char fileName[]) {
+    
+    FILE* file = fopen(fileName, "r"); 
+
+    char line[maximumInterpretSize]; 
+
+    for(int i=0; i < 100 ; i++ ) {
+        fgets(line, sizeof(line), file);
+        strcpy(interprets[i], line);
+    }
+
+    fclose(file);
+
+    return interprets[maximumInterprets][maximumInterpretSize];
+}
+
 
 /**
  * @brief Bubblesort example
@@ -64,7 +88,11 @@ void printTextArray(char interprets[][maximumSize], int sizeOfArray) {
 int main () {
 
     // Unordered list of numbers
-    char interprets[][maximumSize] = { "Bob Dylan", "Abba", "Elvis Presley", "Duran Duran", "Zappa", "Infected Mushroom", "Prodigy" };
+    char interprets[maximumInterprets][maximumInterpretSize];
+
+    // Read textfile line by line
+    readTextFile(interprets, "rollingstone2005list100greatestartists.txt");
+
     int sizeOfArray = sizeof(interprets)/sizeof(interprets[0]);
 
     // Sort the unordered list of numbers ascending
