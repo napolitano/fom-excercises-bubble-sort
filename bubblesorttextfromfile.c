@@ -81,7 +81,7 @@ void readTextFile(char interprets[][maximumInterpretSize], char fileName[]) {
  * @return int 
  */
 int main () {
-   char interprets[maximumInterprets][maximumInterpretSize];
+    char interprets[maximumInterprets][maximumInterpretSize];
 
     // Read textfile line by line
     readTextFile(interprets, "rollingstone2005list100greatestartists.txt");
